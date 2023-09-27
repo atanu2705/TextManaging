@@ -12,7 +12,7 @@ import {
 
  
 function App() {
-  const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
+  const [mode, setMode] = useState('light'); 
   const [alert, setAlert] = useState(null);
 
   const showAlert = (message, type)=>{
@@ -40,7 +40,7 @@ function App() {
   return (
     <>
     <Router>
-    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()} />
+    <Navbar title="TextManaging" mode={mode} toggleMode={toggleMode} key={new Date()} />
     <Alert alert={alert}/>
     <div className="container my-3">
     <Switch>
@@ -48,7 +48,7 @@ function App() {
             <About mode={mode} />
           </Route>
           <Route path="/">
-            <TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode}/>
+            <TextForm showAlert={showAlert} heading="Try TextManaging - word counter, character counter, remove extra spaces" mode={mode}/>
           </Route>
     </Switch>
     </div>
